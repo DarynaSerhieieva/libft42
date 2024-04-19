@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List of test files and corresponding output filenames
-TEST_FILES="test_ft_isalpha.c:ft_isalpha test_ft_isprint.c:ft_isprint"
+TEST_FILES="test_ft_isalpha.c:ft_isalpha test_ft_isprint.c:ft_isprint test_ft_strlen.c:ft_strlen"
 
 # Compile and run test programs
 for test_entry in $TEST_FILES; do
