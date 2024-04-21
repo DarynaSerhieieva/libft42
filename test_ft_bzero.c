@@ -18,7 +18,7 @@ int main(void)
 		if (test_chars1[i] != test_chars2[i])
 		{
 			printf("Error at index %zu: expected '0', got '%c' (ft_bzero)\n", i, test_chars2[i]);
-			return (0);
+			return (1);
 		}
 	}
 	printf("Both bzero and ft_bzero produced the same result\n");

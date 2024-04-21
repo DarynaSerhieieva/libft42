@@ -19,7 +19,7 @@ int main(void)
 		if (test_chars1[i] != test_chars2[i])
 		{
 			printf("Error at index %zu: expected '%c', got '%c' (ft_memset)\n", i, expected_result, test_chars2[i]);
-			return (0);
+			return (1);
 		}
 	}
 	printf("Both memset and ft_memset produced the same result:\n%s\n", test_chars1);

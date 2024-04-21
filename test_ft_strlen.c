@@ -20,7 +20,10 @@ int	main(void)
 		}
 	}
 	else
+	{
 		printf("Mismatch for standard result: %zu, Custom result: %zu\n", standard_result, custom_result);
+		return (1);
+	}
 
 	return (0);
 }

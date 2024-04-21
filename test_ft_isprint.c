@@ -26,6 +26,7 @@ int	main(void)
 		else
 		{
 			printf("Mismatch for %c: Standard result: %d, Custom result: %d\n", test_chars[i], standard_result, custom_result);
+			return (1);
 		}
 	}
 

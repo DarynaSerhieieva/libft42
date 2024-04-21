@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_isalpha.c                                  :+:      :+:    :+:   */
+/*   test_ft_isdigit.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dserhiei < dserhiei@student.42urduliz.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 18:40:32 by dserhiei          #+#    #+#             */
-/*   Updated: 2024/04/21 19:25:15 by dserhiei         ###   ########.fr       */
+/*   Created: 2024/04/17 19:02:01 by dserhiei          #+#    #+#             */
+/*   Updated: 2024/04/21 20:11:40 by dserhiei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ int	main(void)
 
 	for (int i = 0; i < num_tests; i++)
 	{
-		int	standard_result = isalpha(test_chars[i]);
-		int	custom_result = ft_isalpha(test_chars[i]);
+		int	standard_result = isdigit(test_chars[i]);
+		int	custom_result = ft_isdigit(test_chars[i]);
 
 		if (standard_result == custom_result)
 		{
 			if (custom_result)
-				printf("%c is an alphabet letter.\n", test_chars[i]);
+				printf("%c is a digit.\n", test_chars[i]);
 			else
-				printf("%c is not an alphabet letter.\n", test_chars[i]);
+				printf("%c is not a digit.\n", test_chars[i]);
 		}
 		else
 		{
@@ -37,5 +37,6 @@ int	main(void)
 			return (1);
 		}
 	}
+
 	return (0);
 }

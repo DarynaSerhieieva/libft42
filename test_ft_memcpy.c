@@ -17,7 +17,7 @@ int main(void)
 		if (standard_copy[i] != custom_copy[i])
 		{
 			printf("Error at index %zu: expected '%c', got '%c' (ft_memcpy)\n", i, standard_copy[i], custom_copy[i]);
-			return (0);
+			return (1);
 		}
 	}
 	printf("Both memcpy and ft_memset produced the same result:\n%s\n", standard_copy);
