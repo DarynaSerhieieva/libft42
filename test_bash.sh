@@ -6,7 +6,7 @@ for test_file in test_*.c; do
     test_name=$(basename "$test_file" .c)
     
     # Compile test file with library
-    cc -o "$test_name" "$test_file" ft_*.c -I.
+    gcc -o "$test_name" "$test_file" ft_*.c -I.
     
     # Check if compilation was successful
     if [ $? -eq 0 ]; then

@@ -20,7 +20,7 @@ int main(void)
 			return (1);
 		}
 	}
-	printf("Both memcpy and ft_memset produced the same result:\n%s\n", standard_copy);
+	printf("Both memcpy and ft_memcpy produced the same result:\n%s\n", standard_copy);
 
 	return (0);
 }

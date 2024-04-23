@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dserhiei < dserhiei@student.42urduliz.c    +#+  +:+       +#+        */
+/*   By: dserhiei <dserhiei@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 19:19:47 by dserhiei          #+#    #+#             */
-/*   Updated: 2024/04/17 19:31:07 by dserhiei         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:13:31 by dserhiei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

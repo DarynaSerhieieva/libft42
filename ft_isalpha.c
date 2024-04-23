@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dserhiei < dserhiei@student.42urduliz.c    +#+  +:+       +#+        */
+/*   By: dserhiei <dserhiei@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:54:04 by dserhiei          #+#    #+#             */
-/*   Updated: 2024/04/17 18:48:02 by dserhiei         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:13:55 by dserhiei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

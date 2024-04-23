@@ -6,17 +6,15 @@
 
 int	main(void)
 {
-	char	src[SIZE] = "maybe need";
+	char	src[] = "1234567890457574575";
 	char	dest_ft[SIZE];
 	char	dest_std[SIZE];
+    size_t    res1;
+    size_t    res2;
 
-	ft_memmove(dest_ft, src + 2, 5);
-	printf("After ft_memmove: %s\n", dest_ft);
-
-	memmove(dest_std, src + 2, 5);
-	printf("After memmove: %s\n", dest_std);
-
-	if (strcmp(dest_ft, dest_std) == 0)
+	res1 = ft_strlcat(dest_ft, src, sizeof(dest_ft));
+	res2 = strlcat(dest_std, src, sizeof(dest_std)); 
+	if (res1 == res2)
 	{
 		printf("Test passed: Results match!\n");
 	}
