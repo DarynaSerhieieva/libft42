@@ -5,6 +5,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	int	*ptr;
+
 	ptr = (void *)malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
