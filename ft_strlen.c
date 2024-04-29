@@ -6,7 +6,7 @@
 /*   By: dserhiei <dserhiei@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:54:46 by dserhiei          #+#    #+#             */
-/*   Updated: 2024/04/19 16:14:56 by dserhiei         ###   ########.fr       */
+/*   Updated: 2024/04/29 15:54:47 by dserhiei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@ size_t
 	size_t	count;
 
 	count = 0;
-	while (*s != '\0')
+	while (s[count] != '\0')
 	{
 		count++;
-		s++;
 	}
 	return (count);
 }
