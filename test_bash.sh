@@ -6,7 +6,7 @@ for test_file in test_*.c; do
     test_name=$(basename "$test_file" .c)
     
     # Compile test file with library and debugging information
-    gcc -g -o "$test_name" "$test_file" ft_*.c -I.
+    cc -o "$test_name" "$test_file" ft_*.c -I.
     
     # Check if compilation was successful
     if [ $? -eq 0 ]; then
@@ -18,8 +18,6 @@ for test_file in test_*.c; do
             echo "$(tput setaf 2)Test $test_name: PASSED$(tput sgr0)"
         else
             echo "$(tput setaf 1)Test $test_name: FAILED$(tput sgr0)"
-            # Run gdb on failed test
-            gdb ./"$test_name"
         fi
         
         # Clean up test executable

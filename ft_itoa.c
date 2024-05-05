@@ -1,31 +1,65 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dserhiei < dserhiei@student.42urduliz.c    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/05 19:27:40 by dserhiei          #+#    #+#             */
+/*   Updated: 2024/05/05 19:54:18 by dserhiei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
 
-size_t	size_int(int n)
+int	size_int(int n)
 {
-	size_t	num;
-	size_t	i;
+	int	num;
+	int	temp;
 
-	num = 1;
-	if (n < 0)
-			n = n * -1;
-	while (n > num && num * 10 > n)
+	temp = n;
+	num = 0;
+	if (temp == 0)
+		num = 1;
+	else if (n < 0)
 	{
-		i++;
-		num = num * 10;
+		num++;
+		temp = -temp;
 	}
-		
-	return (i);
+	while (temp != 0)
+	{
+		num++;
+		temp /= 10;
+	}
+	return (num);
 }
+
 char	*ft_itoa(int n)
 {
-	size_t	i;
-	size_t	n_size;
-	char	*str;
+	char	*result;
 
-	n_size = size_int(n);
-	str = (char *)malloc(n_size * sizeof(char));
-
-
+	unsigned
+		int i;
+	unsigned
+		int num;
+	num = size_int(n);
+	result = (char *)malloc(num + 1 * sizeof(char));
+	if (result == NULL)
+		return (NULL);
+	if (n < 0)
+	{
+		result[0] = '-';
+		n = -n;
+	}
+	i = num - 1;
+	while (n != 0)
+	{
+		result[i] = '0' + (n % 10);
+		n /= 10;
+		i--;
+	}
+	result[num] = '\0';
+	return (result);
 }

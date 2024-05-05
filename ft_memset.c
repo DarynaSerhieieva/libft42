@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dserhiei <dserhiei@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: dserhiei < dserhiei@student.42urduliz.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 17:54:53 by dserhiei          #+#    #+#             */
-/*   Updated: 2024/04/19 20:32:25 by dserhiei         ###   ########.fr       */
+/*   Updated: 2024/05/05 19:30:49 by dserhiei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ void	*ft_memset(void *s, int c, size_t n)
 		ptr[i] = uc;
 		i++;
 	}
-
 	return (s);
 }
