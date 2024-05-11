@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
 #include "libft.h"
 
 void	run_test(const char *s1, const char *set, const char *expected_result)

@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -30,6 +28,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	while (i != s_len)
 	{
 		ps[i] = f(i, s[i]);
+		i++;
 	}
 	ps[s_len] = '\0';
 	return (ps);

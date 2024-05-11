@@ -1,17 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_ft_isalnum.c                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dserhiei <dserhiei@student.42urduliz.co    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 19:23:49 by dserhiei          #+#    #+#             */
-/*   Updated: 2024/04/23 16:11:04 by dserhiei         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
 
 int	main(void)
@@ -24,7 +11,7 @@ int	main(void)
 		int	standard_result = isalnum(test_chars[i]);
 		int	custom_result = ft_isalnum(test_chars[i]);
 
-		if (standard_result == custom_result)
+		if (standard_result == custom_result || (standard_result == 8 && custom_result == 1))
 		{
 			if (custom_result)
 				printf("%c is a isalnum.\n", test_chars[i]);

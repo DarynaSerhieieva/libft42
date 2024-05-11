@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+
 #include "libft.h"
 
 #define SIZE 10
@@ -10,10 +9,12 @@ int	main(void)
 	char	dest_ft[SIZE];
 	char	dest_std[SIZE];
 
-	ft_memmove(dest_ft, src + 2, 5);
+	ft_memmove(dest_ft, src, 5);
+	dest_ft[5] = '\0';
 	printf("After ft_memmove: %s\n", dest_ft);
 
-	memmove(dest_std, src + 2, 5);
+	memmove(dest_std, src, 5);
+	dest_std[5] = '\0';
 	printf("After memmove: %s\n", dest_std);
 
 	if (strcmp(dest_ft, dest_std) == 0)

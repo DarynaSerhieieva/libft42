@@ -1,17 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_ft_isalpha.c                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dserhiei < dserhiei@student.42urduliz.c    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 18:40:32 by dserhiei          #+#    #+#             */
-/*   Updated: 2024/04/21 19:25:15 by dserhiei         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
 
 int	main(void)
@@ -24,7 +11,7 @@ int	main(void)
 		int	standard_result = isalpha(test_chars[i]);
 		int	custom_result = ft_isalpha(test_chars[i]);
 
-		if (standard_result == custom_result)
+		if (standard_result == custom_result || (standard_result == 1024 && custom_result == 1))
 		{
 			if (custom_result)
 				printf("%c is an alphabet letter.\n", test_chars[i]);

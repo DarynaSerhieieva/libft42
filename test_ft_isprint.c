@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <ctype.h>
+
 #include "libft.h"
 
 int	main(void)
@@ -12,7 +11,7 @@ int	main(void)
 		int standard_result = isprint(test_chars[i]);
 		int custom_result = ft_isprint(test_chars[i]);
 
-		if (standard_result == custom_result)
+		if (standard_result == custom_result || (standard_result == 16384 && custom_result ==  1))
 		{
 			if (custom_result)
 			{

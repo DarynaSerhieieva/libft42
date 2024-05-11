@@ -1,17 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_ft_isdigit.c                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dserhiei < dserhiei@student.42urduliz.c    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 19:02:01 by dserhiei          #+#    #+#             */
-/*   Updated: 2024/04/21 20:11:40 by dserhiei         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
 
 int	main(void)
@@ -24,7 +11,7 @@ int	main(void)
 		int	standard_result = isdigit(test_chars[i]);
 		int	custom_result = ft_isdigit(test_chars[i]);
 
-		if (standard_result == custom_result)
+		if (standard_result == custom_result || (standard_result == 2048 && custom_result == 1))
 		{
 			if (custom_result)
 				printf("%c is a digit.\n", test_chars[i]);
