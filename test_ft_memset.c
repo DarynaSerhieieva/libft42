@@ -1,7 +1,7 @@
 
 #include "libft.h"
 
-int main(void)
+int	main(void)
 {
 	char test_chars1[] = "I need to change every letter to five";
 	char test_chars2[] = "I need to change every letter to five";
