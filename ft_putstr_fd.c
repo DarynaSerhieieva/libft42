@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dserhiei <dserhiei@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: dserhiei <dserhiei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/12 20:22:48 by dserhiei          #+#    #+#             */
-/*   Updated: 2024/05/13 14:57:00 by dserhiei         ###   ########.fr       */
+/*   Created: 2024/05/18 18:10:16 by dserhiei          #+#    #+#             */
+/*   Updated: 2024/05/18 18:10:17 by dserhiei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

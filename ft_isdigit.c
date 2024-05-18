@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dserhiei <dserhiei@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: dserhiei <dserhiei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 18:10:39 by dserhiei          #+#    #+#             */
-/*   Updated: 2024/04/25 15:38:22 by dserhiei         ###   ########.fr       */
+/*   Created: 2024/05/18 18:09:30 by dserhiei          #+#    #+#             */
+/*   Updated: 2024/05/18 18:09:32 by dserhiei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

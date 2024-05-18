@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dserhiei < dserhiei@student.42urduliz.c    +#+  +:+       +#+        */
+/*   By: dserhiei <dserhiei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/05 19:29:01 by dserhiei          #+#    #+#             */
-/*   Updated: 2024/05/05 19:31:22 by dserhiei         ###   ########.fr       */
+/*   Created: 2024/05/18 18:10:44 by dserhiei          #+#    #+#             */
+/*   Updated: 2024/05/18 18:10:45 by dserhiei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	dstlen;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	cont;
 
-	i = 0;
-	dstlen = ft_strlen(dst);
-	while (i < dstsize && dst[i] != '\0')
-		i++;
-	while (src[i - dstlen] != '\0' && i < dstsize - 1)
-	{
-		dst[i] = src[i - dstlen];
-		i++;
-	}
-	if (i < dstsize)
-		dst[i] = '\0';
-	return (dstlen + ft_strlen(src));
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (dstsize <= dst_len)
+		return (src_len + dstsize);
+	cont = dst_len;
+	while (*src != '\0' && cont < (dstsize - 1))
+		*(dst + cont++) = *src++;
+	*(dst + cont) = '\0';
+	return (dst_len + src_len);
 }

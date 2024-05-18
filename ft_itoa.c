@@ -3,61 +3,62 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dserhiei < dserhiei@student.42urduliz.c    +#+  +:+       +#+        */
+/*   By: dserhiei <dserhiei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/05 19:27:40 by dserhiei          #+#    #+#             */
-/*   Updated: 2024/05/05 19:54:18 by dserhiei         ###   ########.fr       */
+/*   Created: 2024/05/18 18:09:39 by dserhiei          #+#    #+#             */
+/*   Updated: 2024/05/18 18:09:41 by dserhiei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	size_int(int n)
+static int
+	ft_abs(int num)
 {
-	int	num;
-	int	temp;
+	if (num < 0)
+		return (-num);
+	else
+		return (num);
+}
 
-	temp = n;
-	num = 0;
-	if (temp == 0)
-		num = 1;
-	else if (n < 0)
+static void
+	ft_strrev(char *str)
+{
+	size_t	length;
+	size_t	i;
+	char	tmp;
+
+	length = ft_strlen(str);
+	i = 0;
+	while (i < length / 2)
 	{
-		num++;
-		temp = -temp;
+		tmp = str[i];
+		str[i] = str[length - i - 1];
+		str[length - i - 1] = tmp;
+		i++;
 	}
-	while (temp != 0)
-	{
-		num++;
-		temp /= 10;
-	}
-	return (num);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*result;
+	char	*str;
+	int		is_neg;
+	size_t	length;
 
-	unsigned
-		int i;
-	unsigned
-		int num;
-	num = size_int(n);
-	result = (char *)malloc(num + 1 * sizeof(char));
-	if (result == NULL)
+	is_neg = (n < 0);
+	str = ft_calloc(11 + is_neg, sizeof(*str));
+	if (!str)
 		return (NULL);
-	if (n < 0)
-	{
-		result[0] = '-';
-		n = -n;
-	}
-	i = num - 1;
+	if (n == 0)
+		str[0] = '0';
+	length = 0;
 	while (n != 0)
 	{
-		result[i] = '0' + (n % 10);
-		n /= 10;
-		i--;
+		str[length++] = '0' + ft_abs(n % 10);
+		n = (n / 10);
 	}
-	result[num] = '\0';
-	return (result);
+	if (is_neg)
+		str[length] = '-';
+	ft_strrev(str);
+	return (str);
 }
