@@ -21,6 +21,28 @@ static int
 		return (num);
 }
 
+static int
+	count_size(int n)
+{
+	int	i;
+	int	clone;
+
+	i = 0;
+	if (n == 0)
+		return (1);
+	if (n == -2147483648 || n == 2147483647)
+		return (10);
+	clone = n;
+	if (n < 0)
+		clone = -clone;
+	while (clone > 0)
+	{
+		clone = clone / 10;
+		i++;
+	}
+	return (i);
+}
+
 static void
 	ft_strrev(char *str)
 {
@@ -43,10 +65,12 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	int		is_neg;
+	int		n_len;
 	size_t	length;
 
 	is_neg = (n < 0);
-	str = ft_calloc(11 + is_neg, sizeof(*str));
+	n_len = count_size(n);
+	str = ft_calloc(n_len + 1 + is_neg, sizeof(*str));
 	if (!str)
 		return (NULL);
 	if (n == 0)

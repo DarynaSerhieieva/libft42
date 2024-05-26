@@ -4,9 +4,9 @@
 int	main(void)
 {
 	char	*ptr;
-	char test_chars[] = "I need to creat substring of this line";
+	char test_chars[] = "test";
 
-	ptr = ft_substr(test_chars, 3, 14);
+	ptr = ft_substr(test_chars, 10, 1);
 	if (ptr == NULL)
 	{
 		printf("Memory allocation failed.\n");
