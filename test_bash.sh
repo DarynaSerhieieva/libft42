@@ -1,17 +1,17 @@
 #!/bin/bash
 make
 # Compile and run all test files
-for test_file in test_*.c; do
+for test_file in tests/test_*.c; do
     # Extract test name without extension
     test_name=$(basename "$test_file" .c)
     
     # Compile test file with library and debugging information
-    cc -o "$test_name" "$test_file" ft_*.c -I.
+    cc -o "tests/$test_name" "$test_file" ft_*.c -I.
     
     # Check if compilation was successful
     if [ $? -eq 0 ]; then
         # Run test executable
-        ./"$test_name"
+        ./tests/"$test_name"
         
         # Check exit status to determine pass or fail
         if [ $? -eq 0 ]; then
@@ -21,7 +21,7 @@ for test_file in test_*.c; do
         fi
         
         # Clean up test executable
-        rm -f "$test_name"
+        rm -f "tests/$test_name"
     else
         echo "Compilation failed for $test_file"
     fi
